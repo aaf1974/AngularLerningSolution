@@ -11,6 +11,8 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { SamplesComponent } from './samples/samples.component';
 import { TimerSampleComponent } from './samples/timer/timer.component';
+import { CustomComponentUsingComponent } from './samples/custom-component/custom-component-using.component';
+import { AnySelectorComponent } from './samples/custom-component/any-selector.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { TimerSampleComponent } from './samples/timer/timer.component';
     FetchDataComponent,
     SamplesComponent,
     TimerSampleComponent,
+    CustomComponentUsingComponent,
+    AnySelectorComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -30,12 +34,9 @@ import { TimerSampleComponent } from './samples/timer/timer.component';
       { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'fetch-data', component: FetchDataComponent },
-      {
-        path: 'samples', component: SamplesComponent,
-
-        //children: [{ path: 'timer', component: TimerSampleComponent }]
-        },
+      { path: 'samples', component: SamplesComponent },
       { path: 'timer', component: TimerSampleComponent },
+      { path: 'custom-component-using', component: CustomComponentUsingComponent }
     ])
   ],
   providers: [],

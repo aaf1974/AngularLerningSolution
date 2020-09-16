@@ -4,3 +4,6 @@ cd ClientApp
 npm start
 
 
+OR
+
+ng serve --port 4201
